@@ -9,11 +9,12 @@
         <h1>Add Toys Product </h1>
         <form action="/Product" method="POST">
             <input type="text" placeholder="name" name="name" />
-            <input type="text" placeholder="quote" name="quote" />
+            <input type="text" placeholder="brand" name="brand">
+            <input type="text" placeholder="price" name="price">
             <button type="submit">Submit</button>
         </form>
 
-        <h2> Quotes </h2>
+        <h2> Product List </h2>
         <ul class="quote">
             <!-- Loop through quotes -->
             <% for(var i = 0; i < quotes.length; i++) {%>
@@ -21,7 +22,9 @@
                     <!-- Output name from the iterated quote object -->
                     <span><%= quotes[i].name %></span>:
                     <!-- Output quote from the iterated quote object -->
-                    <span><%= quotes[i].quote %></span>
+                    <span><%= quotes[i].brand %></span>
+                    <!-- Output quote from the iterated quote object -->
+                    <span><%= quotes[i].price %></span>
                 </li>
             <% } %>
         </ul>
