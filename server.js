@@ -35,7 +35,7 @@ MongoClient.connect(connectionString, (err, client) => {
             .then(result => {
                 
                 // server -> result -> console 
-                console.log(result)
+                //console.log(result)
 
                 res.redirect('/')
             })
@@ -55,11 +55,8 @@ MongoClient.connect(connectionString, (err, client) => {
             res.render('index.ejs', { quotes: results })
         
         })
-        .catch(error => console.error(error))
-        
+        .catch(error => console.error(error))    
     })
-
-
     // server -> listen -> port -> PORT
     app.listen(PORT, function() {
         console.log('listening on ' + PORT)
